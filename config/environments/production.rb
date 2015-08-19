@@ -64,9 +64,14 @@ Hadean::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  if ENV['FOG_DIRECTORY'].present?
-    config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
-  end
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['ktib'],
+    :access_key_id => ENV['AKIAIH5CAZJ2RGIKPV4Q'],
+    :secret_access_key => ENV['Uj/omZOKMshPSDWyF+Yp8i7aYrzrREdg641GTM4r']
+  }
+}
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
@@ -140,12 +145,12 @@ Hadean::Application.configure do
     #)
   end
 
-  PAPERCLIP_STORAGE_OPTS = {  styles: { :mini     => '48x48>',
-                                        :small    => '100x100>',
-                                        :medium   => '200x200>',
-                                        :product  => '320x320>',
-                                        :large    => '600x600>' },
-                              default_style:  :product,
-                              #url:            "/assets/products/:id/:style/:basename.:extension",
-                              path:           ":rails_root/public/assets/products/:id/:style/:basename.:extension" }
+  # PAPERCLIP_STORAGE_OPTS = {  styles: { :mini     => '48x48>',
+   #                                     :small    => '100x100>',
+    #                                    :medium   => '200x200>',
+     #                                   :product  => '320x320>',
+      #                                  :large    => '600x600>' },
+       #                       default_style:  :product,
+        #                      #url:            "/assets/products/:id/:style/:basename.:extension",
+         #                     path:           ":rails_root/public/assets/products/:id/:style/:basename.:extension" }
 end

@@ -32,6 +32,7 @@ gem 'chronic'
 #gem 'compass-rails', git: 'https://github.com/Compass/compass-rails.git'
 gem 'compass-rails', '~> 2.0.1'
 
+gem 'heroku'
 
 gem 'dynamic_form'
 gem 'jbuilder'
@@ -63,7 +64,7 @@ gem 'will_paginate',   '~> 3.0.7'
 gem 'zurb-foundation', '~> 4.3.2'
 
 group :production do
-  gem 'mysql2', '~> 0.3.17'
+  
   gem 'pg'
   gem 'rails_12factor'
 end
@@ -77,6 +78,7 @@ group :development do
   gem "better_errors", '~> 2.0.0'
   gem "binding_of_caller", '~> 0.7.2'
   gem "rails-erd"
+  gem 'mysql2', '~> 0.3.17'
 
   # YARD AND REDCLOTH are for generating yardocs
   gem 'yard'
