@@ -4,7 +4,7 @@ Hadean::Application.configure do
   config.assets.js_compressor = :uglifier
 
   # Settings specified here will take precedence over those in config/environment.rb
-
+  config.log_level = :info
   config.force_ssl = true
 
   # The production environment is meant for finished, "live" apps.
