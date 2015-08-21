@@ -79,7 +79,7 @@ group :development do
   gem "binding_of_caller", '~> 0.7.2'
   gem "rails-erd"
   gem 'mysql2', '~> 0.3.17'
-
+  gem 'config', '~> 1.0.0.beta3'
   # YARD AND REDCLOTH are for generating yardocs
   gem 'yard'
   gem 'RedCloth'

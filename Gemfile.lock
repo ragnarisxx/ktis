@@ -447,6 +447,7 @@ DEPENDENCIES
   capybara
   chronic
   compass-rails (~> 2.0.1)
+  config (~> 1.0.0.beta3)
   database_cleaner (~> 1.2)
   dynamic_form
   email_spec
